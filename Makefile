@@ -1,7 +1,7 @@
 obj-m := acpi_call.o
 
-KVERSION := $(shell uname -r)
-KDIR := /lib/modules/$(KVERSION)/build
+KVER := $(shell uname -r)
+KDIR := /lib/modules/$(KVER)/build
 PWD := $(shell pwd)
 
 default:
@@ -16,3 +16,12 @@ install:
 load:
 	-/sbin/rmmod acpi_call
 	/sbin/insmod acpi_call.ko
+
+dkms-add:
+	/usr/sbin/dkms add $(PWD)
+
+dkms-build:
+	/usr/sbin/dkms build acpi_call/1.0
+
+dkms-remove:
+	/usr/sbin/dkms remove acpi_call/1.0 --all

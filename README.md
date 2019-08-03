@@ -58,6 +58,12 @@ Found this too difficult? Try to use these programs provided by Marco Dalla Libe
 * [acpi_call_GUI (Ubuntu and other debian-based distributions)](http://marcodallas.github.io/acpi_call_GUI/)
 * [acpi_call_GUI_Fedora (Fedora version)](https://github.com/marcoDallas/acpi_call_GUI_Fedora)
 
+#### Resources on the web
+
+* [acpi call table](http://hybrid-graphics-linux.tuxfamily.org/index.php?title=ACPI_calls)
+* [arch wiki](https://wiki.archlinux.org/index.php/Hybrid_graphics#Fully_Power_Down_Discrete_GPU)
+* [redit thread on the topic](https://www.reddit.com/r/linux/comments/78is1r/complete_disable_of_discrete_gpu/)
+
 ***
 
 Copyright (c) 2010: Michal Kottman

@@ -1,7 +1,7 @@
 obj-m := acpi_call.o
 
-KVER := $(shell uname -r)
-KDIR := /lib/modules/$(KVER)/build
+KERNELRELEASE := $(shell uname -r)
+KDIR := /lib/modules/$(KERNELRELEASE)/build
 PWD := $(shell pwd)
 
 default:
@@ -19,9 +19,8 @@ load:
 
 dkms-add:
 	/usr/sbin/dkms add $(PWD)
-
-dkms-build:
-	/usr/sbin/dkms build acpi_call/1.0
+	/usr/sbin/dkms build -m acpi_call -v 1.0
+	/usr/sbin/dkms install -m acpi_call -v 1.0
 
 dkms-remove:
-	/usr/sbin/dkms remove acpi_call/1.0 --all
+	/usr/sbin/dkms remove -m acpi_call -v 1.0 --all
